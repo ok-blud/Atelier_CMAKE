@@ -28,11 +28,11 @@ jobs:
           cmake ..
           make
           ./src/calculator add 2 3
-Test_Div:
+  Test_Div:
     runs-on: ubuntu-latest
     needs: Compilation
     steps:
-      - name: Test fonction add
+      - name: Test fonction div
         run: |
           last_directory=$(basename ${{ runner.workspace }})
           git clone https://github.com/${{ github.repository }}.git
@@ -42,11 +42,11 @@ Test_Div:
           cmake ..
           make
           ./src/calculator div 1 5
-Test_Mul:
+  Test_Mul:
     runs-on: ubuntu-latest
     needs: Compilation
     steps:
-      - name: Test fonction add
+      - name: Test fonction mul
         run: |
           last_directory=$(basename ${{ runner.workspace }})
           git clone https://github.com/${{ github.repository }}.git
@@ -56,11 +56,11 @@ Test_Mul:
           cmake ..
           make
           ./src/calculator mul 5 5
-Test_Sub:
+  Test_Sub:
     runs-on: ubuntu-latest
     needs: Compilation
     steps:
-      - name: Test fonction add
+      - name: Test fonction sub
         run: |
           last_directory=$(basename ${{ runner.workspace }})
           git clone https://github.com/${{ github.repository }}.git
@@ -70,11 +70,11 @@ Test_Sub:
           cmake ..
           make
           ./src/calculator sub 3 -2
-Test_Car:
+  Test_Car:
     runs-on: ubuntu-latest
     needs: Compilation
     steps:
-      - name: Test fonction add
+      - name: Test fonction car
         run: |
           last_directory=$(basename ${{ runner.workspace }})
           git clone https://github.com/${{ github.repository }}.git
