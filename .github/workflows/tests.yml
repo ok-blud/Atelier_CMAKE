@@ -27,9 +27,9 @@ jobs:
           cd build
           cmake ..
           make
-          out="$((./src/calculator add 2 3))"
+          out="$(./src/calculator add 2 3)"
           expected="5.000000"
-          if [ "$out" -ne "" ]; then
+          if [ "$out" -ne "expected" ]; then
             echo "Wrong output, expected $expected, but received $out."
             exit 1
           fi
@@ -47,9 +47,9 @@ jobs:
           cd build
           cmake ..
           make
-          out="$((./src/calculator div 1 5))"
+          out="$(./src/calculator div 1 5)"
           expected="0.200000"
-          if [ "$out" -ne "" ]; then
+          if [ "$out" -ne "$expected" ]; then
             echo "Wrong output, expected $expected, but received $out."
             exit 1
           fi
@@ -67,9 +67,9 @@ jobs:
           cd build
           cmake ..
           make
-          out="$((./src/calculator mul 5 5))"
+          out="$(./src/calculator mul 5 5)"
           expected="25.000000"
-          if [ "$out" -ne "" ]; then
+          if [ "$out" -ne "$expected" ]; then
             echo "Wrong output, expected $expected, but received $out."
             exit 1
           fi
@@ -87,9 +87,9 @@ jobs:
           cd build
           cmake ..
           make
-          out="$((./src/calculator sub 3 -2))"
+          out="$(./src/calculator sub 3 -2)"
           expected="5.000000"
-          if [ "$out" -ne "" ]; then
+          if [ "$out" -ne "$expected" ]; then
             echo "Wrong output, expected $expected, but received $out."
             exit 1
           fi
@@ -107,9 +107,9 @@ jobs:
           cd build
           cmake ..
           make
-          out="$((./src/calculator car 5))"
+          out="$(./src/calculator car 5)"
           expected="25.000000"
-          if [ "$out" -ne "" ]; then
+          if [ "$out" -ne "$expected" ]; then
             echo "Wrong output, expected $expected, but received $out."
             exit 1
           fi
